@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://dl.dropbox.com/s/so0f9x69o4p7l4f/bg.png?raw=1");
+  background-size: 100vw 95vh;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+#login,
+#signup {
+  color: #9f55ff;
+  border: 1px solid #9f55ff;
+  font-size: 0.8em;
+  border-radius: 25px;
+  letter-spacing: 1px;
+}
+#signup {
+  color: white;
+  background-color: #9f55ff;
+}
+#login:hover {
+  color: white;
+  background-color: #9f55ff;
+}
+@media (max-width: 991px) {
+  #login,
+  #signup {
+    display: none;
+  }
+  body {
+    background-size: 100vw 800px;
+  }
+}
+
+#menu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+#menu #icon {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 1);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s linear;
+}
+
+#menu::before,
+#menu::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 1);
+  transition: all 0.3s linear;
+}
+#menu::before {
+  top: 0;
+}
+#menu::after {
+  bottom: 0;
+}
+
+/* Animating Menu button */
+.active #icon {
+  opacity: 0;
+}
+.active::before {
+  top: 0;
+  transform: rotate(225deg);
+}
+.active::after {
+  top: 0;
+  transform: rotate(315deg);
+}
+
+.main .btn {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  border-radius: 20px;
+}
+.main .plans {
+  background-color: white;
+}
+.main .start {
+  background-color: #28a745;
+  color: white;
+}
+
+.reasons p {
+  color: #9f55ff;
+  font-size: 0.9em;
+}
+.reasons .row .col-md-4 {
+  box-sizing: border-box;
+}
+.reasons .row .col-md-4:hover {
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+.reasons i,
+.register .row i,
+.config .row i,
+.receiving .row i {
+  color: white;
+  background: linear-gradient(100deg, dodgerblue, skyblue);
+  font-size: 2em;
+  padding: 30px 30px;
+  border-radius: 50%;
+}
+.reasons .row p,
+.register .row p,
+.config .row p,
+.receiving .row p {
+  color: black;
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+
+.register .row .btn,
+.config .row .btn,
+.receiving .row .btn {
+  background: linear-gradient(100deg, rgb(211, 67, 211), dodgerblue);
+  color: white;
+  font-size: 0.8em;
+  border-radius: 20px;
+}
+.register .img1 {
+  width: 50%;
+  height: 350px;
+}
+.register .img2 {
+  width: 50%;
+  height: 250px;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+}
+
+.manage h5 {
+  opacity: 0.8;
+  font-weight: 400;
+}
+.manage img {
+  width: 90%;
+}
+
+.regInput input {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  border-radius: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  display: block;
+}
+.regInput .btn {
+  background-color: #9f55ff;
+  color: white;
+  width: 400px;
+  display: block;
+  margin: auto;
+  border-radius: 30px;
+}
+
+@media (max-width: 700px) {
+  .regInput input {
+    width: 95%;
+  }
+  .regInput .btn {
+    width: 90%;
+  }
+}
+
+.create h4 {
+  font-weight: 300;
+  color: #9f55ff;
+}
+.create h2 {
+  font-weight: 400;
+}
+
+.create .btn {
+  background-color: #9f55ff;
+  color: white;
+  padding: 10px 30px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  border-radius: 20px;
+}
+
+footer a {
+  font-size: 0.9em;
+}
+footer p {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
